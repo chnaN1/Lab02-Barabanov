@@ -129,6 +129,18 @@ namespace Lab02
             char initial = firstName[0];
             Console.WriteLine($"{surname} {initial}.");
             Console.WriteLine();
+
+            Console.Write("Целое число: ");
+            bool intOk = int.TryParse(Console.ReadLine() ?? "", out int intValue);
+            Console.WriteLine($"int.TryParse: успех = {intOk}, значение = {intValue}");
+
+            Console.Write("Дробное число: ");
+            bool doubleOk = double.TryParse((Console.ReadLine() ?? "").Replace('.', ','), out double doubleValue);
+            Console.WriteLine($"double.TryParse: успех = {doubleOk}, значение = {doubleValue}");
+
+            Console.Write("Дата в формате дд.мм.гггг: ");
+            bool dateOk = DateTime.TryParse(Console.ReadLine() ?? "", out DateTime dateValue);
+            Console.WriteLine($"DateTime.TryParse: успех = {dateOk}, значение = {dateValue:dd.MM.yyyy}");
         }
 
         static double ReadDouble()
