@@ -67,6 +67,13 @@ namespace Lab02
             Console.WriteLine($"studentName: {studentName.GetType().Name}");
             Console.WriteLine($"pi: {pi.GetType().Name}");
             Console.WriteLine();
+
+            Console.Write("Введите ваше имя: ");
+            string name = Console.ReadLine() ?? "";
+            Console.Write("Введите вашу группу: ");
+            string group = Console.ReadLine() ?? "";
+            Console.WriteLine($"Привет, {name}! Группа: {group}.");
+            Console.WriteLine();
         }
     }
 }
