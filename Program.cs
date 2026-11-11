@@ -121,6 +121,14 @@ namespace Lab02
             double bmi = weight / (height * height);
             Console.WriteLine($"ИМТ: {bmi:F2}");
             Console.WriteLine();
+
+            Console.Write("Фамилия: ");
+            string surname = Console.ReadLine() ?? "";
+            Console.Write("Имя: ");
+            string firstName = Console.ReadLine() ?? "";
+            char initial = firstName[0];
+            Console.WriteLine($"{surname} {initial}.");
+            Console.WriteLine();
         }
 
         static double ReadDouble()
