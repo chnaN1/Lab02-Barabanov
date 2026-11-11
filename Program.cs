@@ -113,6 +113,14 @@ namespace Lab02
             Console.WriteLine($"В 2030 году исполнится: {ageIn2030} лет");
             Console.WriteLine($"Средний балл >= 4.0: {isGoodStudent}");
             Console.WriteLine();
+
+            Console.Write("Рост в метрах: ");
+            double height = ReadDouble();
+            Console.Write("Вес в килограммах: ");
+            double weight = ReadDouble();
+            double bmi = weight / (height * height);
+            Console.WriteLine($"ИМТ: {bmi:F2}");
+            Console.WriteLine();
         }
 
         static double ReadDouble()
