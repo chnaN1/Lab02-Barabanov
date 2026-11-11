@@ -31,6 +31,33 @@ namespace Lab02
             max++;
             Console.WriteLine($"int после: {max}");
             Console.WriteLine();
+
+            Console.WriteLine("Тип char:");
+            char letter = 'A';
+            char digit = '7';
+            char cyrillic = 'Ж';
+            Console.WriteLine($"letter = {letter}, код = {(int)letter}");
+            Console.WriteLine($"digit = {digit}, код = {(int)digit}");
+            Console.WriteLine($"cyrillic = {cyrillic}, код = {(int)cyrillic}");
+            Console.WriteLine($"char.IsLetter('A') = {char.IsLetter(letter)}");
+            Console.WriteLine($"char.IsDigit('7') = {char.IsDigit(digit)}");
+            Console.WriteLine($"char.ToUpper('a') = {char.ToUpper('a')}");
+            Console.WriteLine($"char.ToLower('Я') = {char.ToLower('Я')}");
+            Console.WriteLine("Первая строка\nВторая строка");
+            Console.WriteLine("Табуляция:\tмежду\tсловами");
+            Console.WriteLine("Кавычки: \"текст в кавычках\"");
+            Console.WriteLine("Обратный слэш: C:\\temp");
+            Console.WriteLine("Юникод: \u00A9 \u20BD");
+            Console.WriteLine();
+
+            Console.WriteLine("decimal и double:");
+            Console.WriteLine($"double: {0.1 + 0.2}");
+            Console.WriteLine($"decimal: {0.1m + 0.2m}");
+
+            decimal price = 199.99m;
+            int count = 3;
+            Console.WriteLine($"Стоимость: {price * count:F2} руб.");
+            Console.WriteLine();
         }
     }
 }
