@@ -58,6 +58,15 @@ namespace Lab02
             int count = 3;
             Console.WriteLine($"Стоимость: {price * count:F2} руб.");
             Console.WriteLine();
+
+            Console.WriteLine("var:");
+            var studentAge = 20;
+            var studentName = "Иван";
+            var pi = 3.14;
+            Console.WriteLine($"studentAge: {studentAge.GetType().Name}");
+            Console.WriteLine($"studentName: {studentName.GetType().Name}");
+            Console.WriteLine($"pi: {pi.GetType().Name}");
+            Console.WriteLine();
         }
     }
 }
