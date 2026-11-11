@@ -74,6 +74,20 @@ namespace Lab02
             string group = Console.ReadLine() ?? "";
             Console.WriteLine($"Привет, {name}! Группа: {group}.");
             Console.WriteLine();
+
+            Console.Write("Введите год рождения: ");
+            string yearText = Console.ReadLine() ?? "";
+            int yearConvert = Convert.ToInt32(yearText);
+            int yearParse = int.Parse(yearText);
+            Console.WriteLine($"Convert.ToInt32: {yearConvert}");
+            Console.WriteLine($"int.Parse: {yearParse}");
+            Console.WriteLine();
+
+            Console.Write("Сколько книг вы прочитали за год? ");
+            string booksText = Console.ReadLine() ?? "";
+            bool wasSuccessful = int.TryParse(booksText, out int booksCount);
+            Console.WriteLine($"wasSuccessful = {wasSuccessful}, booksCount = {booksCount}");
+            Console.WriteLine();
         }
     }
 }
