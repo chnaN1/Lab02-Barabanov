@@ -88,6 +88,37 @@ namespace Lab02
             bool wasSuccessful = int.TryParse(booksText, out int booksCount);
             Console.WriteLine($"wasSuccessful = {wasSuccessful}, booksCount = {booksCount}");
             Console.WriteLine();
+
+            Console.Write("Имя и фамилия: ");
+            string fullName = Console.ReadLine() ?? "";
+            Console.Write("Название группы: ");
+            string groupName = Console.ReadLine() ?? "";
+            Console.Write("Год рождения: ");
+            int birthYear = Convert.ToInt32(Console.ReadLine() ?? "");
+            Console.Write("Средний балл за прошлый семестр: ");
+            double averageMark = ReadDouble();
+            Console.Write("Любимая буква алфавита: ");
+            string letterText = Console.ReadLine() ?? "";
+            char favoriteLetter = letterText[0];
+
+            int ageIn2030 = 2030 - birthYear;
+            bool isGoodStudent = averageMark >= 4.0;
+
+            Console.WriteLine();
+            Console.WriteLine($"Студент: {fullName}");
+            Console.WriteLine($"Группа: {groupName}");
+            Console.WriteLine($"Год рождения: {birthYear}");
+            Console.WriteLine($"Средний балл: {averageMark:F1}");
+            Console.WriteLine($"Любимая буква: {favoriteLetter} (код {(int)favoriteLetter})");
+            Console.WriteLine($"В 2030 году исполнится: {ageIn2030} лет");
+            Console.WriteLine($"Средний балл >= 4.0: {isGoodStudent}");
+            Console.WriteLine();
+        }
+
+        static double ReadDouble()
+        {
+            string text = Console.ReadLine() ?? "";
+            return double.Parse(text.Replace('.', ','));
         }
     }
 }
